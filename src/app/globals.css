@@ -2,20 +2,64 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  .background {
+    background-image: radial-gradient(
+      circle at 23.4% -21.8%,
+      rgba(9, 29, 85, 1) 0.2%,
+      rgba(0, 0, 0, 1) 100.2%
+    );
+    color: #f7fafc; /* Soft white for primary text */
   }
-}
+  .secondary-background {
+    background-image: radial-gradient(
+      circle at 50% 50%,
+      rgba(44, 83, 100, 1) 0%,
+      rgba(60, 59, 63, 1) 50%,
+      rgba(96, 108, 136, 1) 100%
+    );
+    color: #e2e8f0; /* Light gray for text */
+  }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  .btn-primary {
+    background-color: #3b82f6; /* Royal blue */
+    color: #ffffff; /* White text */
+    border-radius: 8px;
+    padding: 8px 16px;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+
+  .btn-primary:hover {
+    background-color: #60a5fa; /* Neon blue */
+  }
+
+  .btn-secondary {
+    background-color: #2d9cdb; /* Muted teal */
+    color: #ffffff; /* White text */
+  }
+
+  .btn-secondary:hover {
+    background-color: #4fd1c5; /* Soft teal */
+  }
+
+  .link {
+    color: #f59e0b; /* Amber yellow */
+  }
+
+  .link:hover {
+    color: #fb923c; /* Bright orange */
+  }
+
+  .text-error {
+    color: #ef4444; /* Bright red */
+  }
+
+  .text-success {
+    color: #10b981; /* Soft emerald green */
+  }
+
+  .text-warning {
+    color: #facc15; /* Amber orange */
+  }
 }
